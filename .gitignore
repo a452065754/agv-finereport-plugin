@@ -1,0 +1,26 @@
+# AGV Data Source Plugin
+
+## Project Files
+- AgvDataSource.java      # Main source code
+- agv-config.properties   # Configuration file
+- compile_and_deploy.bat  # Build script
+- AGV数据采集插件说明文档.md  # Documentation
+
+## IDE & Build
+- *.class
+- *.jar
+- *.bat (except compile_and_deploy.bat)
+- .idea/
+- *.iml
+
+## OS
+- Thumbs.db
+- .DS_Store
+- Desktop.ini
+
+## Misc
+- .gitconfig
+- .npmrc
+- config.yaml
+- .zshrc
+- .python_history
