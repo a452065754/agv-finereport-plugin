@@ -30,19 +30,13 @@ public class AgvDataSource extends AbstractTableData {
         List<Object[]> rows = new ArrayList<>();
         Properties prop = new Properties();
         
-        String[] paths = {
-            "D:/FineReport_11.0/webapps/webroot/WEB-INF/classes/" + CONFIG_FILE,
-            "C:/FineReport_11.0/webapps/webroot/WEB-INF/classes/" + CONFIG_FILE,
-            CONFIG_FILE
-        };
-        
-        for (String path : paths) {
-            try (InputStream is = new FileInputStream(path)) {
+        // 从 classpath 加载配置文件，不依赖绝对路径
+        try (InputStream is = getClass().getClassLoader().getResourceAsStream(CONFIG_FILE)) {
+            if (is != null) {
                 prop.load(is);
-                break;
-            } catch (Exception e) {
-                // 
             }
+        } catch (Exception e) {
+            // 配置文件加载失败
         }
         
         if (prop.isEmpty()) {

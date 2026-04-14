@@ -77,15 +77,28 @@ XQE-122-2.url=http://192.168.0.9:10001/devicePanel/detail?deviceId=XQE-122-2
 
 ## 部署路径
 
-编译后的 class 文件需部署到：
+**本地开发路径：**
 ```
-D:\FineReport_11.0\webapps\webroot\WEB-INF\classes\com\fr\data\AgvDataSource.class
+C:\Users\xudongdong\AgvDataSource.class
 ```
 
-配置文件：
+**服务器路径（重要！）：**
 ```
-D:\FineReport_11.0\webapps\webroot\WEB-INF\classes\agv-config.properties
+D:\Tomcat\webapps\webroot\WEB-INF\classes\com\fr\data\AgvDataSource.class
+D:\Tomcat\webapps\webroot\WEB-INF\classes\agv-config.properties
 ```
+
+⚠️ 服务器帆软装在 `D:\Tomcat`，不是 `D:\FineReport_11.0`，代码里已加入这个路径。
+
+---
+
+## 常见问题
+
+**Q: 部署后只有一辆车数据？**
+A: 检查服务器上配置文件路径是否正确，代码会 fallback 到只有 XQE-122-1 的默认数据。
+
+**Q: 配置文件放哪？**
+A: 必须放在 `WEB-INF/classes` 目录下，否则会找不到。
 
 ---
 

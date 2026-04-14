@@ -1,26 +1,10 @@
-# AGV Data Source Plugin
+﻿# Ignore everything
+*
 
-## Project Files
-- AgvDataSource.java      # Main source code
-- agv-config.properties   # Configuration file
-- compile_and_deploy.bat  # Build script
-- AGV数据采集插件说明文档.md  # Documentation
-
-## IDE & Build
-- *.class
-- *.jar
-- *.bat (except compile_and_deploy.bat)
-- .idea/
-- *.iml
-
-## OS
-- Thumbs.db
-- .DS_Store
-- Desktop.ini
-
-## Misc
-- .gitconfig
-- .npmrc
-- config.yaml
-- .zshrc
-- .python_history
+# But allow these project files
+!AgvDataSource.java
+!agv-config.properties
+!compile_and_deploy.bat
+!compile8.ps1
+!MEMORY_AGV_PLUGIN.md
+!.gitignore
